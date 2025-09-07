@@ -1,0 +1,4 @@
+go to terminal
+cd notes_project/notes_app
+start the app: python manage.py runserver
+click on the server http://127.0.0.1:8000/

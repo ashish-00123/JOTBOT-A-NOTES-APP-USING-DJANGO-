@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django stuff
+*.log
+db.sqlite3
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Media and static files (if generated)
+media/
+staticfiles/
+
+# Migrations (optional – keep if you want to track schema history)
+*/migrations/*.py
+*/migrations/*.pyc
+# But keep the __init__.py in migrations folders
+!*/migrations/__init__.py
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db

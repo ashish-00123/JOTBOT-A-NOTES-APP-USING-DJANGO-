@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Note</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #121212; color: #e0e0e0; }
+        .card { animation: shake 0.5s; }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card bg-dark shadow-sm p-4 border-danger">
+            <h3 class="mb-3 text-danger">⚠️ Delete Note</h3>
+            <p>Are you sure you want to delete <strong>"{{ note.title }}"</strong>?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">🗑 Yes, Delete</button>
+                <a href="{% url 'note_list' %}" class="btn btn-light">⬅ Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
